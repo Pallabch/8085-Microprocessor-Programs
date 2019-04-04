@@ -1,0 +1,13 @@
+lxi h,0x00A0
+mvi b,5
+mvi c,7
+mov a,m
+inx h
+loop:cmp c 
+jnz skip
+shld 0x0000
+skip:dcr b
+inx h
+mov a,m
+jnz loop
+hlt 

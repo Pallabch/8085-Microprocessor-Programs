@@ -1,0 +1,11 @@
+lxi h,0x0000
+mov a,m
+lxi h,0x0001
+add m
+sta 0x0051
+lxi h,0x0002
+mov a,m
+lxi h,0x0003
+adc m
+sta 0x0050
+hlt

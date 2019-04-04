@@ -1,0 +1,6 @@
+lhld 0x0000
+xchg
+lhld 0x0002
+dad d
+shld 0x00A0
+hlt

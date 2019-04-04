@@ -1,0 +1,12 @@
+;largest number in a block
+lxi h,0x00A0
+mvi c,6
+mvi a,0
+loop:cmp m
+jnc skip
+mov a,m
+skip:inx h
+dcr c
+jnz loop
+sta 0x0000
+hlt

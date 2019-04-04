@@ -1,0 +1,11 @@
+lda 0x0000
+mvi b,0 ;counts the number of 1's
+mvi c,8
+loop:rrc ;rar can also work but not on the online simulator which rotates through the 4th bit for some reason
+jnc next
+inr b
+next:dcr c
+jnz loop
+mov a,b
+sta 0005
+hlt

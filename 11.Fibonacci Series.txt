@@ -1,0 +1,12 @@
+;Fibonacci Series 
+mvi a,1
+mvi c,10
+lxi h,0x0001
+loop:mov m,a
+dcx h
+add m
+inx h
+inx h
+dcr c
+jnz loop
+hlt

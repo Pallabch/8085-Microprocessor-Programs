@@ -1,0 +1,10 @@
+;<8 bit addition with carry>
+lhld 0x0000
+mov a,h
+mov b,l
+add b
+sta 0x0005
+mvi a,0
+adc a
+sta 0x0006
+hlt

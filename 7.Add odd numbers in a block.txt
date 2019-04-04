@@ -1,0 +1,15 @@
+lxi h,0x00A0
+mvi b,5
+mvi c,0
+loop:mov a,m
+ani 01
+jz jump
+mov a,m
+add c
+mov c,a
+jump:inx h
+dcr b
+jnz loop
+mov a,c
+sta 0x0000
+hlt
